@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>C#</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+   <div class="containerOuter">
+        <header>
+                <div id="navButton" onclick="openCloseNav()">&#9776; <span id="headerMenuText">Menü</span></div>  
+            <span id="foCim">C#</span>  
+        </header>
+
+        <div class="container" id="conti">
+            <div class="left" id="sideBar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Kezdő oldal</a></li>
+                        <li id="active">C#</li>
+                        <li><a href="javascript.html">JS</a></li>
+                        <li><a href="css.html">CSS</a></li>
+                        <li><a href="html.html">HTML</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            
+            <div class="content">     
+               
+                <div class="box">A C# (kiejtése: szí-sárp, de ismert a cisz elnevezés is) a Microsoft által a .NET keretrendszer részeként kifejlesztett objektumorientált programozási nyelv. A nyelv alapjául a C++ és a Java szolgált.
+                </div>
+                <h2>Történet</h2>
+                <div class="box"><p>A 90-es években a Microsoft a saját Java keretkörnyezetét a saját operációsrendszer-specifikus függvényeivel és szolgáltatásaival bővítette ki, amire viszont nem volt engedélye (a Java licencét birtokló) Sun Microsystemstől. A Microsoft-féle Javára fejlesztett alkalmazások nem lettek volna futtathatók más rendszereken, ami ellenkezik a Java platform-függetlenségre vonatkozó alapelvével. A Sun végül beperelte a Microsoftot, és ezt követően a Microsoft a Java eltávolítására kényszerült a Windows rendszerekből (természetesen a Java-t a továbbiakban is lehet külön rendszerként telepíteni). A Microsoft egy saját keretrendszer fejlesztésébe kezdett. Ez lett a .NET (kiejtése: dotnet), és ehhez a keretrendszerhez adták ki programnyelvként a C# első verzióját. A későbbiekben ezt a nyelvet úgy fejlesztették tovább, hogy meglegyen az egyensúly a programozó nyelvi szabadsága és a gyors alkalmazásfejlesztés lehetősége között. Rengeteg hivatalosan kiadott bővítmény létezik hozzá, amelyek a kódolást könnyebbé teszik.</p>
+                <p>A C# fejlesztését Anders Hejlsberg vezette, aki a Turbo Pascal tervezője is volt. A .NET osztálykönyvtárait a programozók eredetileg egy sajátos, ún. SMC (Simple Managed C) nyelven írták. 1999-ben azonban Hejlsberg (aki addig a J++ nyelven dolgozott) vezetésével egy csapat alakult egy új programozási nyelv létrehozására, akkoriban COOL (C-like Object Oriented Language, magyarul: C-szerű Objektum Orientált Nyelv) fedőnév alatt.[1] A cél egy olyan nyelv megalkotása volt, mellyel teljesen objektumorientált módon lehet a keretrendszer komponenseit fejleszteni. Egy évvel később, 2000 júliusában a PDC konferencián a .NET-tel, és az ASP.NET-tel együtt a C#-ot is bemutatták, immár ezen névvel, hogy az esetleges szerzői jogi problémákat megelőzzék. Bár sok bírálat érte megjelenésekor, főleg a Java-s táborból, miszerint a Microsoft pusztán legyártotta a saját Java verzióját, Anders azt nyilatkozta, hogy a nyelvet sokkal inkább a C++-hoz szerették volna közelíteni.</p>
+                </div>
+                <h2>Verziók</h2>
+                <div class="box">
+                    Napjainkban a nyelv a 6.0-s verziónál tart, és az 1.0-shoz képest rengeteg újdonságot tartalmaz.
+                    <table>
+                        
+                        <tr>
+                            <th>Verziószám</th>
+                            <th>Megjelenés</th>
+                            <th>Főbb újdonságok</th>
+                        </tr>
+                        <tr>
+                            <td>2.0</td>
+                            <td>2005. november</td>
+                            <td>Generikus és parciális típusok, anonim metódusok, iterátorok</td>
+                        </tr>
+                        <tr>
+                            <td>3.0</td>
+                            <td>2006. november	</td>
+                            <td>Implicit módon megadott lokális változók, lambda-, és lekérdezés-kifejezések, kifejezésfák, objektum inicializálók</td>
+                        </tr>
+                        <tr>
+                            <td>3.0</td>
+                            <td>2007. november</td>
+                            <td>Language Integrated Query, lambda-kifejezések, kiegészítő metódusok</td>
+                        </tr>
+                        <tr>
+                            <td>4.0</td>
+                            <td>2010. április</td>
+                            <td>Dinamikus kötés, opcionális paraméterek, generikus ko- és kontravariancia, Párhuzamos programozás támogatás, PLINQ</td>
+                        </tr>
+                        <tr>
+                            <td>5.0</td>
+                            <td>2012. augusztus	</td>
+                            <td>Aszinkron feladatok, párhuzamos programozás továbbfejlesztése</td>
+                        </tr>
+                        <tr>
+                            <td>6.0</td>
+                            <td>2015. július</td>
+                            <td>Null kondicionális operátor, statikus importálás, csak olvasható auto tulajdonságok</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <h2>Áttekintés</h2>
+                <div class="box">
+                    <p>A C# az a programozási nyelv, ami a legközvetlenebb módon tükrözi az alatta működő, minden .NET programot futtató .NET keretrendszert, valamint erősen függ is attól: nincsen nem menedzselt, natív módban futó C# program. A primitív adattípusai objektumok, a .NET típusok megfelelői. Szemétgyűjtést használ, valamint az absztrakcióinak többsége (osztályok, interfészek, delegáltak, kivételek…) a .NET futtatórendszert használja közvetlen módon.
+
+                        A C vagy C++ nyelvhez hasonlítva a C# több korlátozást és továbbfejlesztést is tartalmaz. A lehetőségei közül néhány:
+                        <ul>
+                                <li>A mutatók és a nem ellenőrzött aritmetika csak egy speciális, nem biztonságos módban (unsafe mode) használható. A legtöbb objektum-hozzáférés csak biztonságos hivatkozásokon keresztül tehető meg, és az aritmetikai műveletek debug módban túlcsordulás szempontjából ellenőrzöttek.
+                                <li>Az objektumok nem szabadíthatók fel közvetlen módon, ehelyett a szemétgyűjtő szabadítja fel őket, mikor már nincs rájuk hivatkozás. Ez a módszer kizárja a nem létező objektumokra való hivatkozás lehetőségét.
+                                <li>A destruktorok (~) elérhetőek. A megfelelően megírt IDisposable interfész (Disposable programozási minta), aminek a lefutását garantálja using blokk, együtt kikényszerítheti az azonnali felszabadítást az osztályon belüli natív erőforrások esetében. A nem natív erőforrások felszabadítását ebben az esetben is a szemétgyűjtő (Garbage Collector) végzi. A finalizerek szintén rendelkezésre állnak, de nem váltanak ki azonnali felszabadítást. Finalizer a Dispose eljárás javasolt implementációs módozatában nem fut le, mivel az ajánlás szerint a szemétgyűjtőt utasítani kell a finalizer hívás kihagyására.
+                                <li>A nyelv csak egyszeres öröklődést támogat, de egy osztály több interfészt is megvalósíthat.
+                                <li>A C# sokkal típusbiztosabb, mint a C++. Az egyetlen implicit konverzió a biztonságos konverzió, úgy mint az egészek tágabb intervallumba konvertálása vagy a leszármazott osztályok alaposztályba konvertálása. Nincs implicit konverzió az egészek és a logikai típus (boolean) között, a felsorolás tagok és az egészek között. Nincsenek void mutatók (bár az Object osztályra mutató mutatók hasonlóak), valamint bármely, a felhasználó által definiált implicit konverziót explicit módon meg kell jelölni.
+                                <li>A felsorolás adattagjai a saját névterükben helyezkednek el.
+                                <li>A 2.0-s verziótól felfelé már rendelkezik a generikus programozás néhány eszközével.
+                                <li>Tulajdonságok (Properties) használhatók, amelyek úgy tesznek lehetővé kódfuttatást mezők beállításakor és olvasásakor, hogy közben az adattagok szintaxisát használja.
+                        </ul>
+                    </p>
+                </div>
+
+
+            </div>
+            
+            <div class="right">
+                <div class="box">
+                    <table>
+                        <tr><th colspan="2"><img src="pic/csharp-logo.png"></th></tr>
+                        <tr><td>Paradigma</td><td>objektumorientált</td></tr>
+                        <tr><td>Jellemző kiterjesztés</td><td>.cs</td></tr>
+                        <tr><td>Megjelent</td><td>2001</td></tr>
+                        <tr><td>Tervező</td><td>Microsoft</td></tr>
+                        <tr><td>Fejlesztő</td><td>Microsoft</td></tr>
+                        <tr><td>Utolsó kiadás</td><td>7.1 (2017. augusztus 17.)</td></tr>
+                        <tr><td>Típusosság</td><td>statikus, dinamikus, erősen típusos, típus biztos, normatív</td></tr>
+                        <tr><td>Dialektusok</td><td>Cω, Spec#, Polyphonic C#</td></tr>
+                        <tr><td>Megvalósítások</td><td>.NET Framework, Mono, DotGNU</td></tr>
+                        <tr><td>Hatással volt rá</td><td>Java, C++, Object Pascal, Eiffel</td></tr>
+                        <tr><td>Befolyásolt nyelvek</td><td>Java 5, F#</td></tr>
+
+                    </table>
+                </div>
+                <h3>Forrás:</h3>  
+                <div class="box">             
+                    <a href="https://hu.wikipedia.org/wiki/C_Sharp">hu.wikipedia.org/wiki/C_Sharp</a>
+                </div>
+                
+            </div>
+        
+        </div>
+        <footer>&copy; 2019 Copyright: <a href="mailto:fulopdaniel@gmail.com">Fülöp Dániel</a></footer>
+    </div>
+        
+
+</body>
+
+</html>

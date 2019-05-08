@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext');
+
+
+:root {
+    /* --custom-color: rgb(39, 159, 180); */
+    --c: blue;
+    --custom-color: rgb(121, 00, 00);
+    /* --custom-color: rgb(13, 80, 13);    */
+    /* --custom-color: rgb(0, 8, 121); */
+    /* --custom-color: rgb(156, 2, 97); */
+    /* --custom-color: rgb(38, 83, 76); */
+  }
+
+*{    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo', sans-serif;    
+}
+
+/* html{
+
+    filter: grayscale(var(--c));
+} */
+
+p{
+    margin: 0px 0px 10px 0px;
+}
+
+h1, h2, h3{
+    margin-left: 30px;
+    color: #ddd;    
+}
+
+
+.containerOuter{
+    background-color: #333;
+}
+
+
+.box{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid lightgray;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 0 0 7px 7px;
+    border-top: 7px solid var(--custom-color);      
+}
+
+.content .box{
+    text-align: justify;
+}
+
+.box:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+    
+}
+
+
+
+
+.box li{
+    margin-left: 1.5em;
+    padding: 5px;    
+}
+
+
+.content table,.content th,.content tr,.content td{
+    border: solid 1px black;
+    padding: 0.2em;
+    text-align: left;
+    border-collapse: collapse;   
+    word-break: break-word; 
+    
+}
+.content table{
+    margin: 15px auto;
+}
+.content th{
+    text-align: center;
+}
+.content tr:nth-child(odd) {
+    background: #FFF
+}
+
+
+.right table,.right th, .right tr, .right td{
+    border-bottom: 1px solid #ccc;       
+    border-collapse: collapse;  
+    
+}
+
+
+header{
+    position: fixed;  
+    top: 0;      
+    width: 100%;      
+    line-height: 57px;
+    background-color: var(--custom-color);    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 2000;  
+
+}
+
+footer{
+    background-color: rgba(26, 24, 24, 0.9);
+    color: #ccc;
+    text-align: center;  
+    padding: 10px;
+    font-size: 0.8em; 
+    letter-spacing: 0.3em;
+}
+
+footer a{
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 700;
+}
+
+#headerMenuText{
+    display: none;
+}
+
+#foCim{
+    color: white;
+    text-align: center; 
+    font-size: 2.3em;     
+}
+
+#navButton{
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 1.9em;
+    cursor: pointer;
+    padding-left: 30px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2); 
+
+}
+.container{
+    margin-top: 60px;
+}
+
+.left{   
+    display: none; 
+    position: fixed;  
+    padding: 1em 0em;   
+    background-color:  var(--custom-color);     
+    top: 60px;
+    width: 100%;
+    min-height: 15em;
+    
+}
+
+.content{   
+    padding: 5px;
+}
+
+.right{   
+    padding: 5px 5px 5px 0px;
+    /* background-color: rgb(233, 15, 149); */
+}
+
+nav{
+    position: fixed;   
+    width: 100%;         
+}
+
+nav ul{       
+    list-style-type: none;    
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+nav a, #active{    
+    text-decoration: none;
+    display: block;    
+    padding: 8px 30px;   
+    color: white;
+    letter-spacing: 0.1em;
+    /* background-color: rgba(255, 255, 255, 0.2 ); */
+    /* text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);  */
+}
+nav a:hover, #active{ 
+   background-color: #333;  
+}
+
+
+h1, h2, h3{
+    margin-left: 30px;
+    color: #ddd;    
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 1.3em;   
+}
+
+h2::first-letter {
+    -webkit-initial-letter: 1;
+    initial-letter: 1;
+    color: var(--custom-color); 
+    font-size: 1.6em;   
+    text-shadow:
+    -1px -1px 0 rgb(255, 255, 255),  
+    1px -1px 0 rgb(255, 255, 255),
+    -1px 1px 0 rgb(255, 255, 255),
+    1px 1px 0 rgb(255, 255, 255);
+}
+
+
+.frontContent{            
+    margin: 30px auto;
+    max-width: 700px;
+    height: 100vh;
+}
+
+.frontBox{    
+    margin: auto;    
+    text-align: center;
+}
+
+/*Tablet*/
+@media screen and (min-width: 479px){
+    
+    header{
+        max-width: 100%;
+    }
+
+  
+    #headerMenuText{
+        display: inline;
+    }
+
+    .container{
+        display: flex;
+        background-image: linear-gradient(rgba(248, 242, 239, 0.2),rgba(36, 3, 3, 0.6)),  url("pic/background.jpg");  
+        /* background-image: linear-gradient(rgba(0, 238, 255, 0.2),rgba(0, 0, 0, 0.6)),  url("pic/background.jpg"); */
+        /* background-image: url("pic/background.jpg");   */
+        background-size: cover;
+        background-repeat: no-repeat;       
+        background-attachment: fixed;     
+      
+    }
+
+    #conti{
+        display: flex;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.9)),  url("pic/background.jpg");  
+        background-size: cover;
+        background-repeat: no-repeat;       
+        background-attachment: fixed;     
+      
+    }
+
+    
+    
+    .left{
+        display: none; 
+        position: fixed;            
+        top: 60px;
+        width: 200px;
+        bottom: 0;       
+        z-index: 200;
+    }
+
+    nav{       
+        width: 200px;      
+    }
+
+    .content{  
+        width: 100%;         
+        /* background-color: rgb(0, 140, 255); */
+    }
+
+    .right{
+        max-width: 300px;
+        min-width: 300px;
+    }
+
+    .frontContent{              
+        display: flex;
+        height: 78vh;     
+    }    
+    .frontBox img{  
+        height: auto;    
+        max-width: 100%;        
+    }
+    .frontBox {       
+        filter: grayscale(100);
+    }
+    .frontBox:hover {
+        filter: grayscale(0);       
+        transition: filter 0.3s linear;
+        border-radius: 14px;               
+    }
+    
+}
+
+/*Asztali*/
+/*991 px től ez lesz érvényben*/
+@media screen and (min-width: 991px){
+
+    body{
+        background-color: #555;
+    }
+    .containerOuter{
+        margin: auto;        
+        width: 90%;       
+    }
+
+    header{
+        max-width: 90%;       
+    }
+    
+    .container{
+        display: flex;
+    }
+
+    .left{
+        display: block; 
+        position: static;
+        background-color: rgba(255, 255, 255, 0.2 );     
+        top: 60px;
+        width: 200px;
+        min-width: 200px;        
+        border-left: 4px solid var(--custom-color);
+    }
+    .indexLeft{
+        display: none; 
+    }
+    nav{       
+        width: 196px;      
+    }
+
+    .content{           
+        width: 100%;        
+    }
+
+    .right{
+        max-width: 300px;
+        min-width: 300px;
+    }
+     
+    nav ul li a:hover, #active{
+        background-color: var(--custom-color);
+        color: white;
+    }
+    
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+   <div class="containerOuter">
+        <header>
+                <div id="navButton" onclick="openCloseNav()">&#9776; <span id="headerMenuText">Menü</span></div>  
+            <span id="foCim">CSS</span>  
+        </header>
+
+        <div class="container" id="conti">
+            <div class="left" id="sideBar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Kezdő oldal</a></li>
+                        <li><a href="csharp.html">C#</a></li>                        
+                        <li><a href="javascript.html">JS</a></li>
+                        <li id="active">CSS</li>                        
+                        <li><a href="html.html">HTML</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            
+            <div class="content">     
+               
+                <div class="box">A CSS ( Cascading Style Sheets, magyarul: egymásba ágyazott stíluslapok) a számítástechnikában egy stílusleíró nyelv, mely a HTML vagy XHTML típusú strukturált dokumentumok megjelenését írja le. Ezenkívül használható bármilyen XML alapú dokumentum stílusának leírására is, mint például az SVG, XUL stb.
+                </div>
+                <h2>Történet</h2>
+                <div class="box"><p>A stíluslapok már a HTML kezdete, 1990 óta jelen vannak valamilyen formában. A böngészők a stílus módosítására létrehozták saját leíró nyelvüket, melyet a webes dokumentumok megjelenésének módosítására lehetett használni. Eredetileg a stíluslapokat a felhasználók használták, mivel a HTML korai verziói még csak kevés prezentációs attribútumot tartalmaztak, így gyakran bízták a felhasználóra, hogy a webes dokumentumok hogyan jelenjenek meg.</p>
+
+                        <p>A webfejlesztők igényei folyamatosan növekedtek a stilisztikai lehetőségek irányába, így a HTML nyelvbe egyre több ilyen elem került. Ilyen lehetőségek mellett a stíluslapok kevésbé voltak fontosak, és egyetlen külső stílusleíró nyelv sem lett széleskörűen elfogadva a CSS megjelenése előtt.</p>
+                        
+                        <p>A CSS eredetileg Håkon Wium Lie ötlete volt 1994-ben. Bert Bos időközben egy Argo nevű böngészőn dolgozott, mely saját stíluslapokat használt; végül ők ketten döntöttek a CSS kifejlesztése mellett.</p>
+                        
+                        <p>Ekkor már több stílusleíró nyelv is létezett, de a CSS volt az első, ami a kapcsolás ötletét használta fel, vagyis a dokumentum stílusa több különböző stíluslapból tevődhetett össze. Ezáltal lehetőség nyílt arra, hogy a felhasználó által megadott stílus bizonyos esetekben felülírja a szerző stílusát, míg a többi esetben örökli azt. A stíluslapok ilyen kapcsolása mind a szerző, mind a felhasználó számára rugalmas vezérlést biztosított, mivel megengedte a vegyes stilisztikai beállításokat.</p>
+                        
+                        <p>Håkon ajánlata a "Mosaic és a Web" konferencián került bemutatásra Chicagóban, először 1994-ben, majd 1995-ben. Ebben az időben alakult meg a Word Wide Web Consortium is, mely később fellépett a CSS érdekében, és megalapított egy bizottságot a részletes kidolgozására. Håkon és Bert volt az elsődleges technikai vezetője a projektnek, melyhez további tagok csatlakoztak, többek között Thomas Reardon a Microsofttól. 1996 decemberében a CSS level 1 ajánlata hivatalosan is megjelent.</p>
+                        
+                        <p>1997 elején a CSS egy Chris Lilley vezette csoporthoz került a W3C-nél. A csoport azokkal a problémákkal foglalkozott, melyeket a CSS Level 1 kihagyott. A CSS Level 2 mint hivatalos ajánlat 1998 májusában jelent meg. A CSS Level 3 még jelenleg, 2014-ben is fejlesztés alatt áll, bár bizonyos funkcióit már használják a legújabb böngészők.</p>
+                </div>
+                <h2>Problémák a megvalósításban</h2>
+                <div class="box">
+                    <p>Bár a CSS1 specifikációja már 1996-ban elkészült, több mint három évbe telt, mire egy böngészőben megjelent a teljes megvalósítása. Az Internet Explorer 5.0 Macintosh 2000 márciusában megjelent változata volt az első olyan böngésző, mely több, mint 99%-ban támogatta a CSS1 szabványt, megelőzve ezzel az Operát is, mely már 15 hónappal azelőtt bevezette a CSS1 támogatását. A többi böngésző hamarosan követte az Internet Explorert, sőt többen már a CSS2 bizonyos elemeit is támogatták. Ennek ellenére 2004-ben még egyetlen böngésző sem támogatta teljes mértékben a CSS2-t. A legrosszabb támogatással például az aural és pages tulajdonságok rendelkeznek.</p>
+
+                    <p>Még azok a böngészők is, melyek teljes megvalósítással rendelkeztek, tele voltak következetlenségekkel, hibákkal és trükkökkel. A fejlesztők sokszor körülírásokat és megkerülő módszereket kellett használjanak, hogy az eredmény minden böngészőben és platformon hasonló legyen. A legismertebb ilyen CSS-hiba az Internet Explorer doboz modellje: a dobozok szélességét a program 5.x, illetve ennél alacsonyabb verziószámú változatai hibásan kezelik, ezért a más böngészőkben helyesen megjelenő elemek szélessége az Internet Explorer ezen verzióiban túl keskeny lesz. A hibát el lehet kerülni, de csak a funkcionalitás rovására.</p>
+            
+                    <p>Ez csak egy a CSS több száz hibája közül az Internet Explorer, Netscape, Mozilla és Opera megvalósításaiban, melyek csökkentik a dokumentumok olvashatóságát. A CSS-hibák burjánzása megnehezítette a webfejlesztők dolgát, hogy hasonló megjelenést érjenek el minden platformon. Jelenleg erős verseny folyik a Mozilla Gecko, az Opera Presto, és a Safari, valamint a Konqueror KHTML motorja között – mindhárom vezető pozíciót szerzett a CSS különböző területein. Az Internet Explorer 2005-ben még a legrosszabb CSS megvalósítással rendelkezett, a W3C ajánlásait figyelembe véve. 2006-ban az Internet Explorer 6 még mindig csak kb. 70%-os CSS2 támogatottsággal fut.</p>
+    
+                    <p>Ezek a problémák arra késztették a W3C szakembereit, hogy felülbírálják a CSS2 szabványt. Így megalkották a CSS2.1 változatát, mely nagyjából a CSS2 jelenleg már működő részeit tartalmazza. A CSS2-nek azokat a részeit, melyeket egyetlen böngésző sem valósított meg sikeresen, kitörölték, vagy a jelenlegi megvalósításoknak megfelelően átírták. A CSS2.1 még nem végleges javaslat.</p>
+                </div>
+                
+
+
+            </div>
+            
+            <div class="right">
+                <div class="box">
+                    <table>
+                        <tr><th colspan="2"><img src="pic/css-logo.png"></th></tr>                        
+                        <tr><td>Jellemző kiterjesztés</td><td>.css</td></tr>
+                        <tr><td>MIME-típus</td><td>text/css</td></tr>
+                        <tr><td>Fejlesztő</td><td>World Wide Web Consortium</td></tr>
+                        <tr><td>Kiadás dátuma</td><td>1996. december 17.</td></tr>                        
+                        <tr><td>Formátum </td><td>Style sheet language</td></tr>
+                        <tr><td>Weboldal</td><td><a href="http://www.w3.org/TR/CSS2/">www.w3.org/TR/CSS2/</a></td></tr>
+                        
+                    </table>
+                </div>
+                <h3>Forrás:</h3>  
+                <div class="box">             
+                    <a href="https://hu.wikipedia.org/wiki/Cascading_Style_Sheets">hu.wikipedia.org/wiki/CSS</a>
+                </div>
+                
+            </div>
+        
+        </div>
+        <footer>&copy; 2019 Copyright: <a href="mailto:fulopdaniel@gmail.com">Fülöp Dániel</a></footer>
+    </div>
+        
+
+</body>
+
+</html>

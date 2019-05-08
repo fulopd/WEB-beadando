@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+   <div class="containerOuter">
+        <header>
+                <div id="navButton" onclick="openCloseNav()">&#9776; <span id="headerMenuText">Menü</span></div>  
+            <span id="foCim">HTML</span>  
+        </header>
+
+        <div class="container" id="conti">
+            <div class="left" id="sideBar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Kezdő oldal</a></li>
+                        <li><a href="csharp.html">C#</a></li>           
+                        <li><a href="javascript.html">JS</a></li>
+                        <li><a href="css.html">CSS</a></li>
+                        <li id="active">HTML</li>
+                        
+                    </ul>
+                </nav>
+
+            </div>
+            
+            <div class="content">     
+               
+                <div class="box">A HTML (angolul: HyperText Markup Language=hiperszöveges jelölőnyelv) egy leíró nyelv, melyet weboldalak készítéséhez fejlesztettek ki, és mára már internetes szabvánnyá vált a W3C (World Wide Web Consortium) támogatásával. Az aktuális változata az 5, mely az SGML általános jelölőnyelv egy konkrét alkalmazása (azaz minden 5-ös HTML dokumentum egyben az SGML dokumentumszabványnak is meg kell hogy feleljen). Ezt tervek szerint lassan kiszorította volna az XHTML (ami a szintén SGML alapú XML leíró nyelven alapul.
+                </div>
+                <h2>Használata</h2>
+                <div class="box"><p>HTML általában szöveges állományokban található meg olyan számítógépeken, melyek az internethez kapcsolódnak. Ezek az állományok tartalmazzák azokat a szimbólumokat, amelyek a megjelenítő programnak leírják, hogyan is kell megjeleníteni illetve feldolgozni az adott állomány tartalmát. Megjelenítő program lehet egy webböngésző (angolul: web browser), aural böngésző (olyan, amelyik a felhasználónak felolvassa a megjelenítendő szöveget), braille olvasó, amely konvertálja a szöveget braille "formátumba", levelező program (mint például: Mozilla Thunderbird, Microsoft Outlook, Eudora stb.), valamint egyéb eszközök, például mobiltelefon.</p>
+                </div>
+                <h2>Szimbólumok, tartalom</h2>
+                <div class="box">
+                    Négyfajta szimbólum (leíró elem) található meg a HTML-ben:
+                    <ul>
+                        <li>strukturális elemek, amelyek leírják az adott szöveg "célját" például &lt;h1>Téma 1&lt;/h1> mint első szintű címsor (alcím).
+                        <li>prezentációs szimbólumok, amelyek leírják, hogy az adott szöveg hogyan nézzen ki: például <b>vastag</b> vastag kinézetet eredményez. (Ez a forma azonban ma már elavultnak számít, helyette a CSS használata javasolt, ugyanis a legújabb irányelv szerint szét kell választani a tartalmat (amit a HTML kódol) és a formát (amit CSS-ben szokás kódolni), és ezáltal mindenki számára elérhetővé tehetőek a weblapok: felolvasó gépeknek, amit a gyengén látók használnak, szöveges böngészőknek, és nyomtatóbarát verziót is könnyebb készíteni.)
+                        <li>hiperszöveg (hypertext) elemek, amelyek segítségével kapcsolat létesíthető a dokumentum egyes elemei és más dokumentumok között (például a <a href="https://hu.wikipedia.org/">Wikipedia</a> a Wikipedia szót mint egy kapcsolatot (angol szóval: link) a megadott URL-hez jeleníti meg)
+                        <li>eszköz elemek, amelyek segítségével gombok, listák, beviteli mezők hozhatók létre.
+                    </ul>
+                </div>
+                <h2>HTML5</h2>
+                <div class="box">
+                    <p>A HTML5 a következő, jelentősen átdolgozott változata a HTML-nek (Hypertext Markup Language), a web fő jelölőnyelvének. Egyik fő tervezési célja, hogy a webes alkalmazásokhoz ne legyen szükség pluginek (pl. Adobe Flash, Microsoft Silverlight, Sun JavaFX) telepítésére. A specifikáció a HTML4 és az XHTML1 új verzióját jelenti, a hozzájuk tartozó DOM2 HTML API-val együtt. A HTML5 specifikációban leírt formátumba történő migráció HTML4-ről, vagy XHTML1-ről a legtöbb esetben egyszerű, mivel a visszamenőleges kompatibilitás biztosított. A specifikáció a közeljövőben támogatni fogja a Web Forms 2.0 specifikációt is. HTML5-ben lehetőség van audio és videofájlok beillesztésére, erre a célra külön tagek vannak (&lt;audio>, &lt;video>). Továbbá létezik egy úgynevezett &lt;canvas> tag, mely egy vászon. Erre Javascript segítségével lehet rajzolni, vagy képet beilleszteni. Fontos megemlíteni, hogy a HTML5-ből kivették az elrendezés megadó tulajdonságokat. Ezeket CSS-ben kell megadni.
+                    </p>
+                </div>
+
+
+            </div>
+            
+            <div class="right">
+                <div class="box">
+                    <table>
+                        <tr><th colspan="2"><img src="pic/html-logo.png"></th></tr>                        
+                        <tr><td>Jellemző kiterjesztés</td><td>.html, .htm</td></tr>
+                        <tr><td>MIME-típus</td><td>text/html</td></tr>                        
+                        <tr><td>Fejlesztő</td><td>World Wide Web Consortium & WHATWG</td></tr>
+                        <tr><td>Formátum típusa</td><td>Jelölőnyelv</td></tr>
+                        <tr><td>Kiterjesztése ennek</td><td>SGML</td></tr>
+                        <tr><td>Kiterjesztése ez</td><td>XHTML</td></tr>
+                        <tr><td>Mac OS típuskód</td><td>TEXT</td></tr>
+                        <tr><td>Uniform</td><td>public.html</td></tr>
+                        <tr><td>Standard</td><td>public.html Standard ISO/IEC 15445 W3C HTML 4.01 W3C HTML5 (draft)</td></tr>
+
+                    </table>
+                </div>
+                <h3>Forrás:</h3>  
+                <div class="box">             
+                    <a href="https://hu.wikipedia.org/wiki/HTML">hu.wikipedia.org/wiki/HTML</a>
+                </div>
+                
+            </div>
+        
+        </div>
+        <footer>&copy; 2019 Copyright: <a href="mailto:fulopdaniel@gmail.com">Fülöp Dániel</a></footer>
+    </div>
+        
+
+</body>
+
+</html>
